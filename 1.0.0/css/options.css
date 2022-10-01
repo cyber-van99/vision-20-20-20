@@ -1,0 +1,26 @@
+html {
+  background: linear-gradient(#284477, #8199c6);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+body {
+  padding: 20px;
+}
+
+.option-main {
+  text-align: center;
+}
+#banner-text {
+  font-size: 35px;
+  color: #23c9a8;
+  text-align: center;
+}
+
+#audioLabel{
+    font-size: 16px;
+    color: #dcefeb;
+    font-weight: 400;
+    background-color: black;
+}
