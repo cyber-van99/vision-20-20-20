@@ -1,0 +1,13 @@
+html{
+    background: linear-gradient(#284477, #8199c6);
+    background-repeat:no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+#autoClose{
+    color: #23c9a8;
+    margin-top: 250px;
+    font-size:xx-large;
+}

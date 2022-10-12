@@ -3,35 +3,32 @@ const resetBtn = document.getElementById("switchReset");
 const text = document.getElementById("text");
 const timer = document.getElementById("timer");
 
-
 //Pause Button
-pauseBtn.addEventListener("click",pauseResume);
+pauseBtn.addEventListener("click", pauseResume);
 
 //Pause and Resume Function embedded into one Function
-function pauseResume(){
-  pauseBtn.innerHTML=="Pause"?pause():resume();
+function pauseResume() {
+  pauseBtn.innerHTML == "Pause" ? pause() : resume();
 }
 
-function pause(){
+function pause() {
   chrome.runtime.sendMessage({ pause: true });
-  pauseBtn.innerHTML="Resume"
+  pauseBtn.innerHTML = "Resume";
 }
-function resume(){
+function resume() {
   chrome.runtime.sendMessage({ resume: true });
-  pauseBtn.innerHTML="Pause"
+  pauseBtn.innerHTML = "Pause";
 }
 
 //Reset button
 resetBtn.addEventListener("click", () => {
   chrome.runtime.sendMessage({ reset: true });
-  pauseBtn.innerHTML="Pause"
+  pauseBtn.innerHTML = "Pause";
 });
 
-//Displays Timer
+// Displays Timer
 chrome.storage.onChanged.addListener((changes, areaName) => {
   chrome.storage.local.get("time", function (result) {
     timer.innerHTML = `${result.time.minutes}:${result.time.seconds}`;
   });
 });
-
-
